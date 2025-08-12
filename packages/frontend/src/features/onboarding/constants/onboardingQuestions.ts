@@ -1,0 +1,88 @@
+export const onboardingQuestions = [
+  { id: 'dob', text: 'Date of birth', type: 'date' },
+  {
+    id: 'gender',
+    text: 'Gender identity',
+    type: 'select',
+    options: ['Male', 'Female', 'Non-binary', 'Prefer not to say'],
+  },
+  {
+    id: 'hw',
+    text: 'Height & weight',
+    type: 'numeric',
+    optional: true,
+    units: ['cm', 'kg'],
+  },
+  {
+    id: 'runs_last_4_weeks',
+    text: 'Runs completed in the last 4 weeks',
+    type: 'select',
+    options: ['0', '1‑3', '4‑6', '7+'],
+  },
+  {
+    id: 'longest_run_last_month',
+    text: 'Longest continuous run in the last month',
+    type: 'select',
+    options: ['0 km', '1‑2 km', '3‑4 km', '5 km', '>5 km'],
+  },
+  { id: 'best_5k', text: 'Best 5 km time (optional)', type: 'time' },
+  {
+    id: 'injury_free',
+    text: 'Are you currently injury‑free and medically cleared to run?',
+    type: 'boolean',
+  },
+  {
+    id: 'medical_conditions',
+    text: 'Any medical conditions we should take into account?',
+    type: 'text',
+  },
+  {
+    id: 'training_days_per_week',
+    text: 'Days per week you can train',
+    type: 'select',
+    options: ['3', '4', '5', '6'],
+  },
+  {
+    id: 'max_session_length_weekdays',
+    text: 'Max session length on weekdays',
+    type: 'select',
+    options: ['30���min', '45 min', '60 min'],
+  },
+  {
+    id: 'long_run_day',
+    text: 'Preferred long‑run day',
+    type: 'select',
+    options: ['Saturday', 'Sunday', 'Flexible'],
+  },
+  {
+    id: 'target_race_date',
+    text: 'Target race date (if any)',
+    type: 'date',
+    optional: true,
+  },
+  {
+    id: 'primary_5k_goal',
+    text: 'Primary 5 km goal',
+    type: 'select',
+    options: [
+      'Finish',
+      'Finish under 35 min',
+      'Finish under 30 min',
+      'Finish under 25 min',
+      'Other',
+    ],
+  },
+  {
+    id: 'device',
+    text: 'Which device/app will you record runs with?',
+    type: 'select',
+    options: [
+      'Garmin',
+      'Apple Watch',
+      'Suunto',
+      'Coros',
+      'Strava only',
+      'Other - text',
+    ],
+  },
+];
