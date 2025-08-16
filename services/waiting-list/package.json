@@ -1,0 +1,19 @@
+{
+  "name": "waiting-list",
+  "version": "1.0.0",
+  "description": "Waitlist API handlers",
+  "main": "index.js",
+  "scripts": {
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"typecheck": "tsc -noEmit"
+  },
+  "dependencies": {
+    "@aws-sdk/util-dynamodb": "^3.241.0"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@types/aws-lambda": "^8.10.0"
+    
+  }
+}

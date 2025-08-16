@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evolv — Train Smarter, Not Just Harder</title>
+  <meta name="description" content="Evolv turns your running data into clear, adaptive training plans. Import your Strava/Garmin history, get instant insights, and join the waiting list." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Evolv — Train Smarter, Not Just Harder" />
+  <meta property="og:description" content="From raw effort to real progress. Join the waiting list." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1C1C1E" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ====== Nav ====== -->
+  <header class="nav" aria-label="Site">
+    <div class="container nav-inner">
+      <a href="#main">
+        <div class="brand" aria-label="Evolv Home">
+          <img src="./logo.png" alt="Evolv Logo" class="logo-mark" aria-hidden="true">
+        </div>
+      </a>
+      <nav class="nav-links cluster" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="nav-cta" onclick="document.getElementById('email').focus();" aria-label="Join the waiting list">Join the waiting list</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ====== Hero ====== -->
+    <section class="hero container-full">
+      <div class="stack container-inner">
+        <span class="eyebrow">Train Smarter, Not Just Harder</span>
+        <h1>Unlock the story your runs are trying to tell you.</h1>
+        <p>
+          Evolv turns your running data into clear, personalized training plans that adapt to you—
+          helping you build fitness, reduce injury risk, and find your next PR with confidence.
+        </p>
+        <div class="cta-row">
+          <button class="cta-primary" onclick="document.getElementById('email').focus();">Join the waiting list</button>
+          <a href="#features">
+            <button class="cta-ghost">See how it works</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Feature Highlights ====== -->
+    <section id="features" class="section">
+        <div class="container grid grid-2">
+        <div>
+            <p class="eyebrow">Insights, not just stats</p>
+            <h2>From chaos to clarity <span style="color:var(--c-primary)">in one tap</span></h2>
+            <p class="copy">Evolv analyzes cadence, pace drift, HR, and terrain to surface what matters most right now—then gives you one action to do next.</p>
+            <ul class="bullets">
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plain‑English debriefs after every run</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Effort guidance that adapts to you</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Visual trends you can actually use</li>
+            </ul>
+        </div>
+        <div class="center">
+            <div class="mockup">
+                <img src="./mockup.png" alt="Evolv app mockup" class="mockup" aria-hidden="true">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Split Section 2 -->
+    <section class="section">
+        <div class="container grid grid-2">
+        <div class="col-reverse center">
+            <div class="mockup">
+                <img src="./mockup.png" alt="Evolv app mockup" class="mockup" aria-hidden="true">
+            </div>
+        </div>
+        <div>
+            <p class="eyebrow">Build smarter fitness</p>
+            <h2>Adaptive plans that <span style="color:var(--c-primary)">change with you</span></h2>
+            <p class="copy">Hit your 10k, Half, or Marathon goals without burning out. Evolv progresses load intelligently and protects recovery.</p>
+            <ul class="bullets">
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Dynamic workouts based on recent runs</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Load & fatigue management built‑in</li>
+            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Negative‑split race rehearsals</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+    <!-- ====== How It Works ====== -->
+    <section id="how" class="section container">
+      <span class="kicker">How it works</span>
+      <h2>From raw effort to real progress—in four steps.</h2>
+      <div class="split" style="margin-top:var(--space-3)">
+        <div class="stack">
+          <div class="pill">Step 1</div>
+          <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Onboard in minutes</h3>
+          <p class="highlight">Answer a few questions, connect your watch, and we’ll read your running story—splits, strides, taper, and all.</p>
+
+          <div class="pill">Step 2</div>
+          <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Get your first insight</h3>
+          <p class="highlight">“Your cadence drops 8% on hills. Focus here to unlock free speed.” Clear, specific, and actionable.</p>
+
+          <div class="pill">Step 3</div>
+          <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Start your adaptive plan</h3>
+          <p class="highlight">A 12‑week plan built for your goal race and life. Every workout has a purpose.</p>
+
+          <div class="pill">Step 4</div>
+          <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Adapt as you go</h3>
+          <p class="highlight">Big week? Light week? We adjust volume and intensity to keep you progressing and healthy.</p>
+        </div>
+        <div class="signup" id="signup" aria-labelledby="join-title">
+          <h3 id="join-title" style="margin-top:0;font-family:var(--font-head);font-weight:800">Join the waiting list</h3>
+          <p class="lede">Be first to get access and help shape the future of smarter training.</p>
+          <form class="signup-form" id="waitlist" autocomplete="on" novalidate>
+            <div class="field">
+              <label for="email" class="visually-hidden">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@runner.com" aria-label="Email address" required>
+            </div>
+            <button class="btn" type="submit" aria-label="Join the waiting list now">Request Invite</button>
+            <div class="help">No spam. Just early access and occasional updates.</div>
+            <div id="feedback" class="help" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====== Parallax ====== -->
+    <section class="section-parallax container-full">
+      <div class="stack container-inner">
+        <h1>Your runs have a voice. We help you hear it.</h1>
+      </div>
+    </section>
+
+
+    <!-- ====== FAQ ====== -->
+    <section id="faq" class="section container faq">
+      <span class="kicker">FAQ</span>
+      <h2>What runners ask us most</h2>
+      <details>
+        <summary>When does the beta start?</summary>
+        <p>We’re inviting runners in waves, starting soon. Join the list to secure your spot.</p>
+      </details>
+      <details>
+        <summary>Who is Evolv for?</summary>
+        <p>Ambitious amateurs training for 10k, half, or marathon who want clarity from their data and a plan that adapts.</p>
+      </details>
+      <details>
+        <summary>How is this different from other apps?</summary>
+        <p>We translate data into decisions. Less dashboard, more direction—what to do next, and why.</p>
+      </details>
+      <details>
+        <summary>What if I miss workouts?</summary>
+        <p>No shame. Plans adapt to keep you healthy and progressing.</p>
+      </details>
+      <details>
+        <summary>Which devices are supported?</summary>
+        <p>Garmin and Strava at launch, with Apple Health and others following shortly after.</p>
+      </details>
+    </section>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer>
+    <div class="container">
+      <div class="footcols">
+        <div>
+          <div class="brand">
+            <img src="./logo.png" alt="Evolv Logo" class="logo-mark" aria-hidden="true">
+          </div>
+          <p class="help" style="margin-top:.6rem">From raw effort to proven progress.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <div class="stack">
+            <a href="#features">Features</a>
+            <a href="#how">How it works</a>
+          </div>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <div class="stack">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Get early access</h4>
+          <form class="stack" onsubmit="return quickSignup(event)">
+            <input type="email" id="email-foot" placeholder="you@runner.com" required
+                   style="padding:.8rem 1rem;border-radius:12px;border:1px solid color-mix(in oklab, var(--c-ink-2), transparent 50%);background:var(--c-bg);color:var(--c-ink)">
+            <button class="btn" type="submit">Join the waiting list</button>
+            <small class="legal">We’ll only email you with meaningful updates.</small>
+            <div id="feedback-foot" class="help" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+      <p class="help" style="margin-top:var(--space-3)">&copy; <span id="yr"></span> Evolv. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Accessibility helpers & minimal interactivity
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('waitlist');
+    const feedback = document.getElementById('feedback');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if(!email || !/.+@.+\..+/.test(email)){
+        feedback.textContent = 'Please enter a valid email address.';
+        feedback.style.color = 'tomato';
+        return;
+      }
+      feedback.textContent = 'Thanks! You’re on the list. We’ll be in touch soon.';
+      feedback.style.color = 'inherit';
+
+      // TODO: make this dynamic
+      const waitlistUrl = 'https://yvba5dfvr4.execute-api.eu-central-1.amazonaws.com/dev/waitlist';
+      await fetch(waitlistUrl, { method: 'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email })})
+      
+      form.reset();
+    });
+
+    function quickSignup(e){
+      e.preventDefault();
+      const field = document.getElementById('email-foot');
+      const fb = document.getElementById('feedback-foot');
+      if(!/.+@.+\..+/.test(field.value)){
+        fb.textContent = 'Add a valid email to join.';
+        fb.style.color = 'tomato';
+        return false;
+      }
+      fb.textContent = 'Great! You’re on the list.';
+      fb.style.color = 'inherit';
+      // TODO: POST to backend
+      field.value = '';
+      return false;
+    }
+  </script>
+
+  <!-- Visually hidden style for label -->
+</body>
+</html>

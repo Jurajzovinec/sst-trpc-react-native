@@ -1,6 +1,7 @@
 import type { SSTConfig } from 'sst'
 import { TrpcApiStack } from './stacks/trpc-api/stack'
 import { WebAppStack } from './stacks/web'
+import { LandingPageStack } from './stacks/landing-page/stack'
 
 const config: SSTConfig = {
 	config(globals) {
@@ -34,6 +35,7 @@ const config: SSTConfig = {
 		})
 
 		app
+			.stack(LandingPageStack)
 			.stack(TrpcApiStack)
 			.stack(WebAppStack)
 	}
