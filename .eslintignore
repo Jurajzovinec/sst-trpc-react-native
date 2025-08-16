@@ -6,3 +6,6 @@ coverage
 
 package-lock.json
 
+# TODO: figure out, otherwise the eslint remains hanging
+services/app/*
+

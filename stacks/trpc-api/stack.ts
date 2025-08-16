@@ -52,7 +52,7 @@ export function TrpcApiStack({ stack }: StackContext): TrpcApiStackOutput {
 	})
 
 	stack.addOutputs({
-		apiUrl: api.url
+		trpcApiUrl: api.url
 	})
 
 	return {
