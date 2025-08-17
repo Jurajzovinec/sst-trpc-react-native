@@ -1,17 +1,16 @@
-import { StaticSite } from 'sst/constructs'
-import type { StackContext } from 'sst/constructs/FunctionalStack'
-
-export function WebAppStack({ stack }: StackContext): void {
-	const web = new StaticSite(stack, 'WebApp', {
+export function WebAppStack() {
+	const web = new sst.aws.StaticSite('WebApp', {
 		path: 'services/app',
-		buildCommand: 'pnpm install && pnpm run build',
-		buildOutput: 'dist',
+		build: {
+			command: 'pnpm install && pnpm run build',
+			output: 'dist'
+		},
 		environment: {
 			NODE_ENV: 'production'
 		}
 	})
 
-	stack.addOutputs({
+	return {
 		cloudfrontUrl: web.url
-	})
+	}
 }

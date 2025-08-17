@@ -5,13 +5,25 @@
 
 declare module "sst" {
   export interface Resource {
-    "Api": {
+    "LandingPage": {
+      "type": "sst.aws.StaticSite"
+      "url": string
+    }
+    "TrpcApi": {
       "type": "sst.aws.ApiGatewayV2"
       "url": string
     }
-    "Counter": {
+    "WaitListApi": {
+      "type": "sst.aws.ApiGatewayV2"
+      "url": string
+    }
+    "Waitlist": {
       "name": string
       "type": "sst.aws.Dynamo"
+    }
+    "WebApp": {
+      "type": "sst.aws.StaticSite"
+      "url": string
     }
   }
 }

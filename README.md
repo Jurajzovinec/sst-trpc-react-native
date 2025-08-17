@@ -2,6 +2,15 @@
 
 # SST + TRPC + REACT-NATIVE
 
+> [!NOTE] 
+> Check deployed (Juraj env):
+> ```
+> TrpcApi: https://p7wasfavqi.execute-api.eu-central-1.amazonaws.com
+> WebApp: https://d174m4a82ft9wa.cloudfront.net
+> LandingPage: https://d38k4kv6cbsz8f.cloudfront.net
+> WaitListApi: https://tjjmhogk14.execute-api.eu-central-1.amazonaws.com
+> ```
+
 ## Tech being used
 
 

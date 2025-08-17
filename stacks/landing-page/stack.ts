@@ -1,59 +1,47 @@
-import { Cors } from 'aws-cdk-lib/aws-apigateway'
-import { ApiGatewayV1Api, StaticSite, Table } from 'sst/constructs'
-import type { StackContext } from 'sst/constructs/FunctionalStack'
-
 // Do not deal with CORS now
 const allowOrigins = ['*']
 
-export function LandingPageStack({ stack }: StackContext): void {
-	const landingPage = new StaticSite(stack, 'LandingPage', {
+export function LandingPageStack() {
+	const landingPage = new sst.aws.StaticSite('LandingPage', {
 		path: 'services/landing-page'
 	})
 
-	const table = new Table(stack, 'Waitlist', {
-		primaryIndex: { partitionKey: 'email' },
-		fields: { email: 'string' },
-	})
-
-	const api = new ApiGatewayV1Api(stack, 'WaitListApi', {
-		cdk: {
-			restApi: {
-				defaultCorsPreflightOptions: {
-					allowOrigins,
-					allowMethods: Cors.ALL_METHODS,
-					allowCredentials: true
-				}
-			}
+	const table = new sst.aws.Dynamo('Waitlist', {
+		fields: { 
+			email: 'string' 
 		},
-		routes: {
-			'GET /waitlist': {
-				function: {
-					handler: './services/waiting-list/src/get.handler',
-					bind: [table],
-					environment: {
-						ALLOW_ORIGINS: allowOrigins.join(';'),
-						TABLE_NAME: table.tableName
-					}
-				}
-			},
-			'POST /waitlist': {
-				function: {
-					handler: './services/waiting-list/src/create.handler',
-					bind: [table],
-					environment: {
-						ALLOW_ORIGINS: allowOrigins.join(';'),
-						TABLE_NAME: table.tableName
-					}
-				}
-			}
+		primaryIndex: { 
+			hashKey: 'email' 
 		}
 	})
 
-	stack.addOutputs({
-	  landingPageCloudFrontUrl: landingPage.url
+	const api = new sst.aws.ApiGatewayV2('WaitListApi', {
+		cors: {
+			allowOrigins,
+			allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+			// For now
+			// allowCredentials: true
+		}
 	})
 
-	stack.addOutputs({
-		waitlistApiUrl: api.url
+	api.route('GET /waitlist', {
+		handler: './services/waiting-list/src/get.handler',
+		link: [table],
+		environment: {
+			ALLOW_ORIGINS: allowOrigins.join(';')
+		}
 	})
+
+	api.route('POST /waitlist', {
+		handler: './services/waiting-list/src/create.handler',
+		link: [table],
+		environment: {
+			ALLOW_ORIGINS: allowOrigins.join(';')
+		}
+	})
+
+	return {
+		landingPageCloudFrontUrl: landingPage.url,
+		waitlistApiUrl: api.url
+	}
 }

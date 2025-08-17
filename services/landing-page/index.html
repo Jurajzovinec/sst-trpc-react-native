@@ -227,7 +227,7 @@
       feedback.style.color = 'inherit';
 
       // TODO: make this dynamic
-      const waitlistUrl = 'https://yvba5dfvr4.execute-api.eu-central-1.amazonaws.com/dev/waitlist';
+      const waitlistUrl = 'https://tjjmhogk14.execute-api.eu-central-1.amazonaws.com/waitlist';
       await fetch(waitlistUrl, { method: 'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email })})
       
       form.reset();

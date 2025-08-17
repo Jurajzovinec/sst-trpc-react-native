@@ -8,7 +8,7 @@ import type { AppRouter } from '../../../trpc-api/src/index';
 
 // TODO: Specify this dynamically
 const TRPC_BASE_URL: string =
-  'https://fudfcik3k7.execute-api.eu-central-1.amazonaws.com/dev/trpc';
+  'https://fudfcik3k7.execute-api.eu-central-1.amazonaws.com/trpc';
 
 export const queryClient = new QueryClient({
   defaultOptions: {

@@ -1,14 +1,12 @@
 import { DynamoDBClient, PutItemCommand } from '@aws-sdk/client-dynamodb'
 import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
-import { marshall } from '@aws-sdk/util-dynamodb';
+import { marshall } from '@aws-sdk/util-dynamodb'
+import { Resource } from 'sst'
 
-
-const tableName: string = process.env['TABLE_NAME']!
 const allowOrigins: string[] = process.env['ALLOW_ORIGINS']!.split(',')
 
-if (!tableName || !allowOrigins) {
+if (!allowOrigins) {
 	throw new Error(`Missing ENV variables:
-    TABLE_NAME: ${tableName}
     ALLOW_ORIGINS: ${allowOrigins}`)
 }
 
@@ -35,7 +33,7 @@ export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayPr
 
 	await client.send(
 		new PutItemCommand({
-			TableName: tableName,
+			TableName: Resource.Waitlist.name,
 			Item: marshall({ email })
 		})
 	)

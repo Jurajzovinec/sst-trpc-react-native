@@ -1,14 +1,12 @@
 import { DynamoDBClient, ScanCommand } from '@aws-sdk/client-dynamodb'
 import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
-import {  unmarshall } from '@aws-sdk/util-dynamodb';
+import { unmarshall } from '@aws-sdk/util-dynamodb'
+import { Resource } from 'sst'
 
-
-const tableName: string = process.env['TABLE_NAME']!
 const allowOrigins: string[] = process.env['ALLOW_ORIGINS']!.split(',')
 
-if (!tableName || !allowOrigins) {
+if (!allowOrigins) {
 	throw new Error(`Missing ENV variables:
-    TABLE_NAME: ${tableName}
     ALLOW_ORIGINS: ${allowOrigins}`)
 }
 
@@ -23,7 +21,7 @@ const headers = {
 export const handler = async (_event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
 	const result = await client.send(
 		new ScanCommand({
-			TableName: tableName
+			TableName: Resource.Waitlist.name
 		})
 	)
 

@@ -1,44 +1,31 @@
-import type { SSTConfig } from 'sst'
-import { TrpcApiStack } from './stacks/trpc-api/stack'
-import { WebAppStack } from './stacks/web'
-import { LandingPageStack } from './stacks/landing-page/stack'
+/// <reference path="./.sst/platform/config.d.ts" />
 
-const config: SSTConfig = {
-	config(globals) {
-		// TODO: Figure this out from Purple stack
-		const stage = "dev"
-
+export default $config({
+	app(input) {
 		return {
 			name: 'evolv-stack',
-			stage,
-			region: 'eu-central-1'
+			removal: input?.stage === 'production' ? 'retain' : 'remove',
+			home: 'aws',
+			providers: {
+				aws: {
+					region: 'eu-central-1'
+				}
+			}
 		}
 	},
-	stacks(app) {
-		if (app.stage === 'master' && app.mode === 'dev') {
+	async run() {
+		if ($app.stage === 'master' && $dev) {
 			throw new Error('Cannot deploy master stage in dev mode')
 		}
 
-		app.setDefaultFunctionProps({
-			runtime: 'nodejs20.x',
-			architecture: 'arm_64',
-			logRetention: 'three_months',
-			logRetentionRetryOptions: { maxRetries: 100 },
-			tracing: 'disabled',
-			environment: {
-				// https://docs.powertools.aws.dev/lambda/typescript/latest/#environment-variables
-				POWERTOOLS_DEV: app.local ? 'true' : 'false',
-				POWERTOOLS_LOG_LEVEL: app.local
-					? 'DEBUG'
-					: 'INFO'
-			}
-		})
+		const { LandingPageStack } = await import('./stacks/landing-page/stack')
+		const { TrpcApiStack } = await import('./stacks/trpc-api/stack')
+		const { WebAppStack } = await import('./stacks/web')
 
-		app
-			.stack(LandingPageStack)
-			.stack(TrpcApiStack)
-			.stack(WebAppStack)
+		await Promise.all([
+			LandingPageStack(),
+			TrpcApiStack(),
+			WebAppStack()
+		])
 	}
-} satisfies SSTConfig
-
-export default config
+})
