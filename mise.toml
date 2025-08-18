@@ -1,4 +1,0 @@
-[tools]
-node = "22"
-pnpm = "10.11.1"
-typescript = "5.3.3"
