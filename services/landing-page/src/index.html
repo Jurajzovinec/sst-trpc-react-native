@@ -410,25 +410,38 @@
             }
             feedback.textContent = 'Thanks! You’re on the list. We’ll be in touch soon.';
             feedback.style.color = 'inherit';
-
-            const url = import.meta.env.VITE_WAIT_LIST_API_URL + '/waitlist';
-            await fetch(url, { method: 'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email })})
+            
+            try {
+                const url = import.meta.env.VITE_WAIT_LIST_API_URL + '/waitlist';
+                await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) })
+            } catch (error) {
+                feedback.textContent = 'Oops! Something went wrong.';
+                feedback.style.color = 'tomato';
+            }
 
             form.reset();
         });
 
-        function quickSignup(e) {
+        const quickSignup = async (e) => {
             e.preventDefault();
-            const field = document.getElementById('email-foot');
+            const field = document.getElementById('email-foot').value.trim();
             const fb = document.getElementById('feedback-foot');
-            if (!/.+@.+\..+/.test(field.value)) {
+            if (!/.+@.+\..+/.test(field)) {
                 fb.textContent = 'Add a valid email to join.';
+                fb.style.color = 'tomato';
+                return false;
+            }
+            try {
+                // TODO: make this dynamic
+                const waitlistUrl = 'https://tjjmhogk14.execute-api.eu-central-1.amazonaws.com/waitlist';
+                await fetch(waitlistUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: field }) })
+            } catch (error) {
+                fb.textContent = 'Oops! Something went wrong.';
                 fb.style.color = 'tomato';
                 return false;
             }
             fb.textContent = 'Great! You’re on the list.';
             fb.style.color = 'inherit';
-            // TODO: POST to backend
             field.value = '';
             return false;
         }
