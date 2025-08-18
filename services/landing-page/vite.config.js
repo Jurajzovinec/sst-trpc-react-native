@@ -17,12 +17,13 @@ export default defineConfig(({ mode }) => {
 	}
 
 	return {
-		root: './src',
+		root: '.',
+    publicDir: './public',
 		build: {
-			outDir: '../dist',
+			outDir: './dist',
 			rollupOptions: {
 				input: {
-					main: './src/index.html'
+					main: './index.html'
 				}
 			}
 		},
