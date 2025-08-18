@@ -31,3 +31,8 @@ out
 cdk.context.json
 
 .claude/*
+
+*local*
+
+# landing page build output
+dist

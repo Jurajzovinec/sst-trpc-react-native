@@ -6,7 +6,7 @@ export function TrpcApiStack() {
 	const api = new sst.aws.ApiGatewayV2('TrpcApi', {
 		cors: {
 			allowOrigins: ['*'],
-			allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+			allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 			// For now
 			// allowCredentials: true
 		}
