@@ -76,7 +76,8 @@
 }
  .container-inner{
     max-width: var(--maxw);
-     margin-inline:auto;
+    margin-inline:auto;
+    padding: 0 var(--space-2);
 }
  .container-full{
     max-width: 100vw;
@@ -417,7 +418,8 @@
 }
 /* ====== FAQ ====== */
  .faq{
-    max-width:900px
+    max-width:900px;
+    margin: 0 auto;
 }
  .faq details{
      border:1px solid color-mix(in oklab, var(--c-ink-2), transparent 60%);
@@ -473,10 +475,10 @@
 /* ====== Responsive ====== */
  @media (max-width: 960px){
      .container-inner{
-        padding: 0 var(--space-2)
+        padding: 0 var(--space-4)
     }
      .container{
-        padding: 0 var(--space-2)
+        padding: 0 var(--space-4)
     }
      .cards .card{
         grid-column: span 6
@@ -559,6 +561,31 @@
         grid-template-columns:1fr 1fr
     }
 }
+
+/* Mobile-specific feature section styling */
+@media (max-width: 767px) {
+    .grid-2 {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+    
+    /* Ensure mockup always comes first on mobile */
+    .grid-2 .center {
+        order: -1;
+    }
+    
+    /* Better spacing for mockups on mobile */
+    .mockup {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    /* Adjust text spacing for mobile */
+    .grid-2 > div:not(.center) {
+        text-align: left;
+    }
+}
  .section{
     padding:64px 0;
     border-top:1px solid var(--line)
@@ -599,6 +626,13 @@
  @media(min-width:768px){
     .col-reverse{
         grid-auto-flow:dense
+    }
+}
+
+/* Disable col-reverse effect on mobile */
+@media (max-width: 767px) {
+    .col-reverse {
+        order: -1 !important;
     }
 }
  .mini{
