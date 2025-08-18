@@ -1,6 +1,6 @@
 import { DynamoDBClient, ScanCommand } from '@aws-sdk/client-dynamodb'
-import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import { unmarshall } from '@aws-sdk/util-dynamodb'
+import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import { Resource } from 'sst'
 
 const allowOrigins: string[] = process.env['ALLOW_ORIGINS']!.split(',')
@@ -18,6 +18,7 @@ const headers = {
 	'Content-Type': 'application/json'
 }
 
+// @ts-ignore @typescript-eslint/no-unused-vars
 export const handler = async (_event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
 	const result = await client.send(
 		new ScanCommand({
@@ -29,7 +30,7 @@ export const handler = async (_event: APIGatewayProxyEvent): Promise<APIGatewayP
 		statusCode: 200,
 		headers,
 		body: JSON.stringify({
-			items: result.Items ? result.Items.map(item => unmarshall(item)) : [],
+			items: result.Items ? result.Items.map((item) => unmarshall(item)) : [],
 			count: result.Count || 0
 		})
 	}

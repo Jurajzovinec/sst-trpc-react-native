@@ -1,6 +1,6 @@
 import { DynamoDBClient, PutItemCommand } from '@aws-sdk/client-dynamodb'
-import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import { marshall } from '@aws-sdk/util-dynamodb'
+import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import { Resource } from 'sst'
 
 const allowOrigins: string[] = process.env['ALLOW_ORIGINS']!.split(',')
