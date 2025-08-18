@@ -221,7 +221,7 @@
      font-size:.8rem;
      color: var(--c-bg-hi);
 }
- .section-parallax h1{
+ .section-parallax h2{
      font-family: var(--font-head);
      color: var(--c-bg);
      font-weight:800;
@@ -420,6 +420,9 @@
  .faq{
     max-width:900px;
     margin: 0 auto;
+}
+ .faq .grid{
+    gap: var(--space-2);
 }
  .faq details{
      border:1px solid color-mix(in oklab, var(--c-ink-2), transparent 60%);

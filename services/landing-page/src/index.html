@@ -4,116 +4,205 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Evolv — Train Smarter, Not Just Harder</title>
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Evolv — Train Smarter, Not Just Harder | AI-Powered Running Training Plans</title>
+    <meta name="title" content="Evolv — Train Smarter, Not Just Harder | AI-Powered Running Training Plans" />
     <meta name="description"
-        content="Evolv turns your running data into clear, adaptive training plans. Import your Strava/Garmin history, get instant insights, and join the waiting list." />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap"
-        rel="stylesheet">
-    <meta property="og:title" content="Evolv — Train Smarter, Not Just Harder" />
-    <meta property="og:description" content="From raw effort to real progress. Join the waiting list." />
+        content="Evolv turns your running data into clear, adaptive training plans. Import your Strava/Garmin history, get instant insights, and join the waiting list for AI-powered marathon and 10K training." />
+    <meta name="keywords"
+        content="running training plans, marathon training, 10K training, AI running coach, Strava analysis, Garmin training, adaptive training, running data analysis" />
+    <meta name="author" content="Evolv Training" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://evolv.training/" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#1C1C1E" />
+    <meta property="og:url" content="https://evolv.training/" />
+    <meta property="og:title" content="Evolv — Train Smarter, Not Just Harder | AI-Powered Running Training Plans" />
+    <meta property="og:description"
+        content="Evolv turns your running data into clear, adaptive training plans. Import your Strava/Garmin history, get instant insights, and join the waiting list." />
+    <meta property="og:image" content="https://evolv.training/og-image.jpg" />
+    <meta property="og:image:alt" content="Evolv running training app interface showing AI-powered insights" />
+    <meta property="og:site_name" content="Evolv Training" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://evolv.training/" />
+    <meta property="twitter:title" content="Evolv — Train Smarter, Not Just Harder" />
+    <meta property="twitter:description"
+        content="AI-powered running training plans that adapt to your progress. Get instant insights from your Strava/Garmin data." />
+    <meta property="twitter:image" content="https://evolv.training/og-image.jpg" />
+    <meta property="twitter:image:alt" content="Evolv running training app interface" />
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#F97316" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Evolv Training" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap">
+    </noscript>
+
+    <!-- Preload critical images -->
+    <link rel="preload" href="./hero.png" as="image" />
+    <link rel="preload" href="./logo.png" as="image" />
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Evolv",
+      "description": "AI-powered running training plans that adapt to your progress. Turn your running data into clear, personalized training plans for 10K, half marathon, and marathon goals.",
+      "url": "https://evolv.training",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS, Android, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Evolv Training",
+        "url": "https://evolv.training"
+      },
+      "featureList": [
+        "AI-powered training plan generation",
+        "Strava and Garmin data integration",
+        "Adaptive training plans",
+        "Marathon training programs",
+        "10K and half marathon training",
+        "Real-time training insights",
+        "Cadence and pace analysis"
+      ]
+    }
+    </script>
 </head>
 
 <body>
     <a href="#main" class="skip">Skip to content</a>
 
     <!-- ====== Nav ====== -->
-    <header class="nav" aria-label="Site">
+    <header class="nav" aria-label="Site navigation">
         <div class="container nav-inner">
-            <a href="#">
-                <div class="brand" aria-label="Evolv Home">
-                    <img src="./logo.png" alt="Evolv Logo" class="logo-mark" aria-hidden="true">
+            <a href="https://evolv.training" aria-label="Evolv Training - Home">
+                <div class="brand">
+                    <img src="./logo.png" alt="Evolv Training Logo - AI-Powered Running Coach" class="logo-mark"
+                        width="auto" height="26">
                 </div>
             </a>
-            <nav class="nav-links cluster" aria-label="Primary">
-                <a href="#features">Features</a>
-                <a href="#how">How it works</a>
-                <a href="#faq">FAQ</a>
+            <nav class="nav-links cluster" aria-label="Primary navigation">
+                <a href="#features" title="Discover AI-powered running insights">Features</a>
+                <a href="#how" title="Learn how Evolv creates training plans">How it works</a>
+                <a href="#faq" title="Frequently asked questions about Evolv">FAQ</a>
             </nav>
             <button class="nav-cta" onclick="document.getElementById('email').focus();"
-                aria-label="Join the waiting list">Join the waiting list</button>
+                aria-label="Join the waiting list for early access" type="button">Join the waiting list</button>
         </div>
     </header>
 
     <main id="main">
         <!-- ====== Hero ====== -->
-        <section class="hero container-full">
+        <section class="hero container-full" aria-labelledby="hero-heading">
             <div class="stack container-inner">
                 <span class="eyebrow">Train Smarter, Not Just Harder</span>
-                <h1>Unlock the story your runs are trying to tell you.</h1>
+                <h1 id="hero-heading">Unlock the story your runs are trying to tell you.</h1>
                 <p>
                     Evolv turns your running data into clear, personalized training plans that adapt to you—
                     helping you build fitness, reduce injury risk, and find your next PR with confidence.
                 </p>
                 <div class="cta-row">
-                    <button class="cta-primary" onclick="document.getElementById('email').focus();">Join the waiting
+                    <button class="cta-primary" onclick="document.getElementById('email').focus();" type="button"
+                        aria-label="Join waiting list for early access to AI-powered training">Join the waiting
                         list</button>
-                    <a href="#features">
-                        <button class="cta-ghost">See how it works</button>
+                    <a href="#features" aria-label="Learn about Evolv's AI-powered features">
+                        <button class="cta-ghost" type="button">See how it works</button>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- ====== Feature Highlights ====== -->
-        <section id="features" class="section">
+        <section id="features" class="section" aria-labelledby="features-heading">
             <div class="container grid grid-2">
                 <div>
                     <p class="eyebrow">Insights, not just stats</p>
-                    <h2>From chaos to clarity <span style="color:var(--c-primary)">in one tap</span></h2>
+                    <h2 id="features-heading">From chaos to clarity <span style="color:var(--c-primary)">in one
+                            tap</span></h2>
                     <p class="copy">Evolv analyzes cadence, pace drift, HR, and terrain to surface what matters most
                         right now—then gives you one action to do next.</p>
-                    <ul class="bullets">
-                        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
+                    <ul class="bullets" role="list">
+                        <li role="listitem"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M20 6 9 17l-5-5" />
                             </svg>Plain‑English debriefs after every run</li>
-                        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
+                        <li role="listitem"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M20 6 9 17l-5-5" />
                             </svg>Effort guidance that adapts to you</li>
-                        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
+                        <li role="listitem"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M20 6 9 17l-5-5" />
                             </svg>Visual trends you can actually use</li>
                     </ul>
                 </div>
                 <div class="center">
                     <div class="mockup">
-                        <img src="./mockup_1.png" alt="Evolv app mockup" class="mockup" aria-hidden="true">
+                        <img src="./mockup_1.png"
+                            alt="Evolv app interface showing AI-powered running insights and post-run analysis"
+                            class="mockup" width="320" height="auto" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Split Section 2 -->
-        <section class="section">
+        <!-- ====== Adaptive Training Plans ====== -->
+        <section class="section" aria-labelledby="adaptive-heading">
             <div class="container grid grid-2">
                 <div class="col-reverse center">
                     <div class="mockup">
-                        <img src="./mockup_2.png" alt="Evolv app mockup" class="mockup" aria-hidden="true">
+                        <img src="./mockup_2.png"
+                            alt="Evolv adaptive training plan interface showing dynamic workout adjustments and marathon training progression"
+                            class="mockup" width="320" height="auto" loading="lazy">
                     </div>
                 </div>
                 <div>
                     <p class="eyebrow">Build smarter fitness</p>
-                    <h2>Adaptive plans that <span style="color:var(--c-primary)">change with you</span></h2>
+                    <h2 id="adaptive-heading">Adaptive plans that <span style="color:var(--c-primary)">change with
+                            you</span></h2>
                     <p class="copy">Hit your 10k, Half, or Marathon goals without burning out. Evolv progresses load
                         intelligently and protects recovery.</p>
-                    <ul class="bullets">
-                        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
+                    <ul class="bullets" role="list">
+                        <li role="listitem"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M20 6 9 17l-5-5" />
                             </svg>Dynamic workouts based on recent runs</li>
-                        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
+                        <li role="listitem"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M20 6 9 17l-5-5" />
                             </svg>Load & fatigue management built‑in</li>
-                        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
+                        <li role="listitem"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M20 6 9 17l-5-5" />
                             </svg>Negative‑split race rehearsals</li>
                     </ul>
@@ -122,126 +211,179 @@
         </section>
 
         <!-- ====== How It Works ====== -->
-        <section id="how" class="section">
+        <!-- ====== How It Works ====== -->
+        <section id="how" class="section" aria-labelledby="how-heading">
             <div class="container">
                 <span class="kicker">How it works</span>
-                <h2>From raw effort to real progress—in four steps.</h2>
+                <h2 id="how-heading">From raw effort to real progress—in four steps.</h2>
                 <div class="split" style="margin-top:var(--space-3)">
                     <div class="stack">
-                        <div class="pill">Step 1</div>
-                        <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Onboard in minutes</h3>
-                        <p class="highlight">Answer a few questions, connect your watch, and we’ll read your running
-                            story—splits, strides, taper, and all.</p>
+                        <article>
+                            <div class="pill">Step 1</div>
+                            <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Onboard in minutes</h3>
+                            <p class="highlight">Answer a few questions, connect your watch, and we'll read your running
+                                story—splits, strides, taper, and all.</p>
+                        </article>
 
-                        <div class="pill">Step 2</div>
-                        <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Get your first insight</h3>
-                        <p class="highlight">“Your cadence drops 8% on hills. Focus here to unlock free speed.” Clear,
-                            specific, and actionable.</p>
+                        <article>
+                            <div class="pill">Step 2</div>
+                            <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Get your first insight
+                            </h3>
+                            <p class="highlight">"Your cadence drops 8% on hills. Focus here to unlock free speed."
+                                Clear,
+                                specific, and actionable.</p>
+                        </article>
 
-                        <div class="pill">Step 3</div>
-                        <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Start your adaptive plan</h3>
-                        <p class="highlight">A 12‑week plan built for your goal race and life. Every workout has a
-                            purpose.</p>
+                        <article>
+                            <div class="pill">Step 3</div>
+                            <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Start your adaptive plan
+                            </h3>
+                            <p class="highlight">A 12‑week plan built for your goal race and life. Every workout has a
+                                purpose.</p>
+                        </article>
 
-                        <div class="pill">Step 4</div>
-                        <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Adapt as you go</h3>
-                        <p class="highlight">Big week? Light week? We adjust volume and intensity to keep you
-                            progressing and healthy.</p>
+                        <article>
+                            <div class="pill">Step 4</div>
+                            <h3 style="margin:0;font-family:var(--font-head);font-weight:700">Adapt as you go</h3>
+                            <p class="highlight">Big week? Light week? We adjust volume and intensity to keep you
+                                progressing and healthy.</p>
+                        </article>
                     </div>
-                    <div class="signup" id="signup" aria-labelledby="join-title">
+                    <aside class="signup" id="signup" aria-labelledby="join-title">
                         <h3 id="join-title" style="margin-top:0;font-family:var(--font-head);font-weight:800">Join the
                             waiting list</h3>
                         <p class="lede">Be first to get access and help shape the future of smarter training.</p>
-                        <form class="signup-form" id="waitlist" autocomplete="on" novalidate>
+                        <form class="signup-form" id="waitlist" autocomplete="on" novalidate
+                            aria-describedby="form-help">
                             <div class="field">
-                                <label for="email" class="visually-hidden">Email</label>
+                                <label for="email" class="visually-hidden">Email address</label>
                                 <input id="email" name="email" type="email" placeholder="you@runner.com"
-                                    aria-label="Email address" required>
+                                    aria-label="Enter your email address for early access" required
+                                    autocomplete="email">
                             </div>
-                            <button class="btn" type="submit" aria-label="Join the waiting list now">Request
+                            <button class="btn" type="submit"
+                                aria-label="Request early access to Evolv training">Request
                                 Invite</button>
-                            <div class="help">No spam. Just early access and occasional updates.</div>
+                            <div class="help" id="form-help">No spam. Just early access and occasional updates.</div>
                             <div id="feedback" class="help" role="status" aria-live="polite"></div>
                         </form>
-                    </div>
+                    </aside>
                 </div>
             </div>
         </section>
 
 
-        <!-- ====== Parallax ====== -->
-        <section class="section-parallax container-full">
+        <!-- ====== Social Proof ====== -->
+        <section class="section-parallax container-full" aria-labelledby="social-proof-heading">
             <div class="stack container-inner">
-                <h1>Your runs have a voice. We help you hear it.</h1>
+                <h2 id="social-proof-heading">Your runs have a voice. We help you hear it.</h2>
             </div>
         </section>
 
 
         <!-- ====== FAQ ====== -->
-        <section id="faq" class="section faq">
-            <div class="container">
-                <span class="kicker">FAQ</span>
-                <h2>What runners ask us most</h2>
-                <details>
-                    <summary>When does the beta start?</summary>
-                    <p>We’re inviting runners in waves, starting soon. Join the list to secure your spot.</p>
-                </details>
-                <details>
-                    <summary>Who is Evolv for?</summary>
-                    <p>Ambitious amateurs training for 10k, half, or marathon who want clarity from their data and a
-                        plan
-                        that adapts.</p>
-                </details>
-                <details>
-                    <summary>How is this different from other apps?</summary>
-                    <p>We translate data into decisions. Less dashboard, more direction—what to do next, and why.</p>
-                </details>
-                <details>
-                    <summary>What if I miss workouts?</summary>
-                    <p>No shame. Plans adapt to keep you healthy and progressing.</p>
-                </details>
-                <details>
-                    <summary>Which devices are supported?</summary>
-                    <p>Garmin and Strava at launch, with Apple Health and others following shortly after.</p>
-                </details>
+        <!-- ====== FAQ ====== -->
+        <section id="faq" class="section faq" aria-labelledby="faq-heading">
+            <div class="container grid">
+                <div>
+                    <span class="kicker">FAQ</span>
+                    <h2 id="faq-heading">What runners ask us most</h2>
+                </div>
+
+                <article itemscope itemtype="https://schema.org/Question">
+                    <details>
+                        <summary itemprop="name">When does the beta start?</summary>
+                        <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                            <p itemprop="text">We're inviting runners in waves, starting soon. Join the list to secure
+                                your spot.</p>
+                        </div>
+                    </details>
+                </article>
+
+                <article itemscope itemtype="https://schema.org/Question">
+                    <details>
+                        <summary itemprop="name">Who is Evolv for?</summary>
+                        <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                            <p itemprop="text">Ambitious amateurs training for 10k, half, or marathon who want clarity
+                                from their data and a
+                                plan that adapts.</p>
+                        </div>
+                    </details>
+                </article>
+
+                <article itemscope itemtype="https://schema.org/Question">
+                    <details>
+                        <summary itemprop="name">How is this different from other apps?</summary>
+                        <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                            <p itemprop="text">We translate data into decisions. Less dashboard, more direction—what to
+                                do next, and why.</p>
+                        </div>
+                    </details>
+                </article>
+
+                <article itemscope itemtype="https://schema.org/Question">
+                    <details>
+                        <summary itemprop="name">What if I miss workouts?</summary>
+                        <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                            <p itemprop="text">No shame. Plans adapt to keep you healthy and progressing.</p>
+                        </div>
+                    </details>
+                </article>
+
+                <article itemscope itemtype="https://schema.org/Question">
+                    <details>
+                        <summary itemprop="name">Which devices are supported?</summary>
+                        <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                            <p itemprop="text">Garmin and Strava at launch, with Apple Health and others following
+                                shortly after.</p>
+                        </div>
+                    </details>
+                </article>
             </div>
         </section>
     </main>
 
     <!-- ====== Footer ====== -->
-    <footer>
+    <!-- ====== Footer ====== -->
+    <footer itemscope itemtype="https://schema.org/Organization">
         <div class="container">
             <div class="footcols">
                 <div>
                     <div class="brand">
-                        <img src="./logo.png" alt="Evolv Logo" class="logo-mark" aria-hidden="true">
+                        <img src="./logo.png" alt="Evolv Training Logo" class="logo-mark" width="auto" height="26"
+                            itemprop="logo">
                     </div>
-                    <p class="help" style="margin-top:.6rem">From raw effort to proven progress.</p>
+                    <p class="help" style="margin-top:.6rem" itemprop="description">From raw effort to proven progress.
+                    </p>
+                    <meta itemprop="name" content="Evolv Training">
+                    <meta itemprop="url" content="https://evolv.training">
                 </div>
                 <div>
                     <h4>Product</h4>
-                    <div class="stack">
-                        <a href="#features">Features</a>
-                        <a href="#how">How it works</a>
-                    </div>
+                    <nav class="stack" aria-label="Product navigation">
+                        <a href="#features" title="AI-powered running insights">Features</a>
+                        <a href="#how" title="How Evolv creates adaptive training plans">How it works</a>
+                    </nav>
                 </div>
                 <div>
                     <div style="display: none;">
                         <h4>Company</h4>
-                        <div class="stack">
-                            <a href="#">Privacy</a>
-                            <a href="#">Terms</a>
-                            <a href="#">Contact</a>
-                        </div>
+                        <nav class="stack" aria-label="Company information">
+                            <a href="/privacy" rel="nofollow">Privacy</a>
+                            <a href="/terms" rel="nofollow">Terms</a>
+                            <a href="mailto:hello@evolv.training" rel="nofollow">Contact</a>
+                        </nav>
                     </div>
                 </div>
                 <div>
                     <h4>Get early access</h4>
-                    <form class="stack" onsubmit="return quickSignup(event)">
-                        <input type="email" id="email-foot" placeholder="you@runner.com" required
+                    <form class="stack" onsubmit="return quickSignup(event)" aria-describedby="footer-form-help">
+                        <label for="email-foot" class="visually-hidden">Email address for early access</label>
+                        <input type="email" id="email-foot" placeholder="you@runner.com" required autocomplete="email"
+                            aria-label="Enter email for early access"
                             style="padding:.8rem 1rem;border-radius:12px;border:1px solid color-mix(in oklab, var(--c-ink-2), transparent 50%);background:var(--c-bg);color:var(--c-ink)">
-                        <button class="btn" type="submit">Join the waiting list</button>
-                        <small class="legal">We’ll only email you with meaningful updates.</small>
+                        <button class="btn" type="submit" aria-label="Join waiting list">Join the waiting list</button>
+                        <small class="legal" id="footer-form-help">We'll only email you with meaningful updates.</small>
                         <div id="feedback-foot" class="help" role="status" aria-live="polite"></div>
                     </form>
                 </div>

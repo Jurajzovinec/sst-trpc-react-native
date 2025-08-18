@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main homepage -->
+  <url>
+    <loc>https://evolv.training/</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Image sitemap entries -->
+    <image:image>
+      <image:loc>https://evolv.training/mockup_1.png</image:loc>
+      <image:caption>Evolv app interface showing AI-powered running insights and post-run analysis</image:caption>
+      <image:title>Evolv Running App Mockup - Features Interface</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://evolv.training/mockup_2.png</image:loc>
+      <image:caption>Evolv adaptive training plan interface showing dynamic workout adjustments</image:caption>
+      <image:title>Evolv Training Plan Interface - Adaptive Workouts</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://evolv.training/hero.png</image:loc>
+      <image:caption>Evolv hero background showing runner training with AI-powered insights</image:caption>
+      <image:title>Evolv Hero Image - Smart Running Training</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://evolv.training/logo.png</image:loc>
+      <image:caption>Evolv Training logo - AI-powered running coach</image:caption>
+      <image:title>Evolv Training Logo</image:title>
+    </image:image>
+  </url>
+  
+</urlset>
