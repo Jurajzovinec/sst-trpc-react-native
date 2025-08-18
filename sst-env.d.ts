@@ -5,6 +5,14 @@
 
 declare module "sst" {
   export interface Resource {
+    "Database": {
+      "database": string
+      "host": string
+      "password": string
+      "port": number
+      "type": "sst.aws.Postgres"
+      "username": string
+    }
     "LandingPage": {
       "type": "sst.aws.StaticSite"
       "url": string
@@ -12,6 +20,10 @@ declare module "sst" {
     "TrpcApi": {
       "type": "sst.aws.ApiGatewayV2"
       "url": string
+    }
+    "Vpc": {
+      "bastion": string
+      "type": "sst.aws.Vpc"
     }
     "WaitListApi": {
       "type": "sst.aws.ApiGatewayV2"

@@ -3,11 +3,11 @@
 	"version": "0.0.0",
 	"private": true,
 	"type": "module",
-  "engines": {
-    "node": ">=22.14.0",
-    "pnpm": ">=9.6.0"
-  },
-  "packageManager": "pnpm@10.11.1",
+	"engines": {
+		"node": ">=22.14.0",
+		"pnpm": ">=9.6.0"
+	},
+	"packageManager": "pnpm@10.11.1",
 	"scripts": {
 		"env": "env-cmd -f ./.env bash -c \"aws sts get-caller-identity --profile \\$AWS_PROFILE --no-cli-pager >/dev/null 2>&1 || aws sso login --profile \\$AWS_PROFILE\" && env-cmd -f ./.env",
 		"dev": "pnpm run env -- sst dev",
@@ -15,31 +15,38 @@
 		"remove": "pnpm run env -- sst remove",
 		"console": "pnpm run env -- sst console",
 		"secret": "pnpm run env -- sst secret",
+		"tunnel": "pnpm run env -- sst tunnel --print-logs",
 		"typecheck": "tsc --noEmit",
 		"lint": "eslint 'stacks' 'services' 'constructs' --ext .ts,.tsx,.js,.jsx,.cjs,.mjs && prettier -c \"**/*.{json,html}\"",
-		"lint:fix": "eslint 'stacks' 'services' 'constructs' --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix && prettier --write \"**/*.{json,html}\""
+		"lint:fix": "eslint 'stacks' 'services' 'constructs' --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix && prettier --write \"**/*.{json,html}\"",
+		"db": "sst shell drizzle-kit",
+		"clean": "rm -rf .sst && rm -rf node_modules"
 	},
 	"devDependencies": {
+		"@microsoft/eslint-plugin-sdl": "^0.2.2",
 		"@tsconfig/node20": "^20.1.4",
 		"@types/node": "catalog:",
-		"aws-cdk-lib": "2.142.1",
-		"constructs": "10.3.0",
-		"sst": "^3.3.45",
-		"typescript": "catalog:",
-		"aws-sdk": "^2.1692.0",
-		"babel-plugin-inline-dotenv": "^1.7.0",
-		"@microsoft/eslint-plugin-sdl": "^0.2.2",
+		"@types/pg": "^8.15.5",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
+		"aws-cdk-lib": "2.142.1",
+		"aws-sdk": "^2.1692.0",
+		"babel-plugin-inline-dotenv": "^1.7.0",
+		"constructs": "10.3.0",
+		"drizzle-kit": "^0.31.4",
+		"drizzle-orm": "^0.44.4",
 		"env-cmd": "^10.1.0",
-		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-prettier": "^5.1.3",
-		"eslint-plugin-react": "^7.34.1",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react": "^7.34.1",
 		"eslint-plugin-security": "^2.1.1",
 		"eslint-plugin-simple-import-sort": "^10.0.0",
-		"prettier": "^3.2.5"
+		"eslint": "^8.57.0",
+		"pg": "^8.16.3",
+		"prettier": "^3.2.5",
+		"sst": "^3.3.45",
+		"typescript": "catalog:"
 	}
 }

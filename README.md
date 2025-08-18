@@ -69,7 +69,7 @@ Env file is quite simple in this case. Only `AWS_PROFILE` is necessary value.
 ### Example
 
 ```ini
-AWS_PROFILE=purple-technology
+AWS_PROFILE=<AWS profile to deploy this stack to, probably specified in .aws/config>
 ```
 
 ## Setup

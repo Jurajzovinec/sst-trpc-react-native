@@ -18,11 +18,13 @@ export default $config({
 			throw new Error('Cannot deploy master stage in dev mode')
 		}
 
+		const { DbStack } = await import('./stacks/db/stack')
 		const { LandingPageStack } = await import('./stacks/landing-page/stack')
 		const { TrpcApiStack } = await import('./stacks/trpc-api/stack')
 		const { WebAppStack } = await import('./stacks/web')
 
 		await Promise.all([
+			DbStack(),
 			LandingPageStack(),
 			TrpcApiStack(),
 			WebAppStack()
